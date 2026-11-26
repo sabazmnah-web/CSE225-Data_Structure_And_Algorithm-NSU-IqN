@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+void swap(int &ref1, int &ref2) {
+    int temp;
+    temp = ref1;
+    ref1 = ref2;
+    ref2 = temp;
+}
+
+int main(void) {
+    int x = 5, y = 10;
+    cout << "Before swap function: ";
+    cout << "x = " << x << ", y = " << y << endl;
+    swap(x, y);
+    cout << "After swap function: ";
+    cout << "x = " << x << ", y = " << y << endl;
+    return 0;
+}
+```[cite: 141]
+
+---
+
+## Lecture 02: Dynamic Memory Allocation
+
+### Arrays and Pointers
+```c
+#include <stdio.h>
+
+int main(void) {
+    char str[5] = {'H', 'E', 'L', 'L', 'O'};
+    char *ptr = &str[0];
+    printf("ptr = %08x\n", ptr);
+    printf("str = %08x\n", str);
+    return 0;
+}
