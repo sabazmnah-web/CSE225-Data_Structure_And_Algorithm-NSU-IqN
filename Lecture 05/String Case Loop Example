@@ -1,0 +1,4 @@
+char someString[10];
+gets(someString);
+for (i = 0; i < strlen(someString); i++)
+    someString[i] -= 32;
