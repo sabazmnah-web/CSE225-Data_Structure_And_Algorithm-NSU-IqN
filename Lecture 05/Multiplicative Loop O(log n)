@@ -1,0 +1,3 @@
+count = 0;
+for (i = 1; i < N; i = i * 2)
+    count++;
