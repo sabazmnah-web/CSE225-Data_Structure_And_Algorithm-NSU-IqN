@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+class Complex {
+public:
+    Complex();
+    Complex(double, double);
+    Complex Add(Complex);
+    void Print();
+private:
+    double Real, Imaginary;
+};
+
+Complex::Complex() {
+    Real = 0;
+    Imaginary = 0;
+}
+
+Complex::Complex(double r, double i) {
+    Real = r;
+    Imaginary = i;
+}
+
+Complex Complex::Add(Complex c) {
+    Complex t;
+    t.Real = Real + c.Real;
+    t.Imaginary = Imaginary + c.Imaginary;
+    return t;
+}
+
+void Complex::Print() {
+    cout << Real << endl;
+    cout << Imaginary << endl;
+}
+
+int main(void) {
+    Complex A(1, 1), B(2, 3);
+    Complex C;
+    C = A.Add(B);
+    C.Print();
+    return 0;
+}
